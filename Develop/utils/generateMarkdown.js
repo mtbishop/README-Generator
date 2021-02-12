@@ -1,5 +1,5 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+// License array for the name/badge/info for each license. Can choose which one is appropriate for project.
+
 const licenses = [
   {
     licenseName: 'MIT',

@@ -36,10 +36,10 @@ project and sections entitled Description, Table of Contents, Installation, Usag
 
 
 WHEN I enter my project title
-THEN this is displayed as the title of the README
+THEN this is displayed as the title of the README ✔
 
 
-WHEN I enter a description, installation instructions, usage information, contribution guidelines, and test instructions
+WHEN I enter a description ✔, installation instructions ✔, usage information ✔, contribution guidelines ✔, and test instructions ✔
 THEN this information is added to the sections of the README entitled Description, Installation, Usage, Contributing, and Tests
 
 
@@ -123,3 +123,9 @@ You are required to submit the following for review:
 ---
 
 © 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+
+
+
+Reference for License Badges: https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
+
+References for Licenses: https://choosealicense.com/licenses/

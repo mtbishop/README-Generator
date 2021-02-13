@@ -1,59 +1,63 @@
-// License array for the name/badge/info for each license. Can choose which one is appropriate for project.
+function renderLicenseBadge(license) {
+  // License array for the name/badge/info for each license. Can choose which one is appropriate for project.
+  const genLicenses = [
+    {
+      licenseName: 'MIT',
+      badgeURL:
+        '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)',
+      licenseURL: 'https://choosealicense.com/licenses/mit/',
+    },
+    {
+      licenseName: 'Apache 2.0',
+      badgeURL:
+        '[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)',
+      licenseURL: 'https://choosealicense.com/licenses/apache-2.0/',
+    },
+    {
+      licenseName: 'Mozilla Public License 2.0',
+      badgeURL:
+        '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)',
+      licenseURL: 'https://choosealicense.com/licenses/mpl-2.0/',
+    },
+    {
+      licenseName: 'GNU AGPLv3',
+      badgeURL:
+        '[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)',
+      licenseURL: 'https://choosealicense.com/licenses/agpl-3.0/',
+    },
+    {
+      licenseName: 'GNU GPLv3',
+      badgeURL:
+        '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)',
+      licenseURL: 'https://choosealicense.com/licenses/gpl-3.0/',
+    },
+    {
+      licenseName: 'GNU LGPLv3',
+      badgeURL:
+        '[![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)',
+      licenseURL: 'https://choosealicense.com/licenses/lgpl-3.0/',
+    },
+    {
+      licenseName: 'Unlicense',
+      badgeURL:
+        '[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)',
+      licenseURL: 'https://choosealicense.com/licenses/unlicense/',
+    },
+  ];
+  console.log(license);
+  const usedLicenses = genLicenses.filter((x) => x.licenseName == license);
+  return usedLicenses[0].badgeURL;
+}
 
-const licenses = [
-  {
-    licenseName: 'MIT',
-    badgeURL:
-      '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)',
-    licenseURL: 'https://choosealicense.com/licenses/mit/',
-  },
-  {
-    licenseName: 'Apache 2.0',
-    badgeURL:
-      '[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)',
-    licenseURL: 'https://choosealicense.com/licenses/apache-2.0/',
-  },
-  {
-    licenseName: 'Mozilla Public License 2.0',
-    badgeURL:
-      '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)',
-    licenseURL: 'https://choosealicense.com/licenses/mpl-2.0/',
-  },
-  {
-    licenseName: 'GNU AGPLv3',
-    badgeURL:
-      '[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)',
-    licenseURL: 'https://choosealicense.com/licenses/agpl-3.0/',
-  },
-  {
-    licenseName: 'GNU GPLv3',
-    badgeURL:
-      '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)',
-    licenseURL: 'https://choosealicense.com/licenses/gpl-3.0/',
-  },
-  {
-    licenseName: 'GNU LGPLv3',
-    badgeURL:
-      '[![License: LGPL v3](https://img.shields.io/badge/License-LGPL%20v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)',
-    licenseURL: 'https://choosealicense.com/licenses/lgpl-3.0/',
-  },
-  {
-    licenseName: 'Unlicense',
-    badgeURL:
-      '[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)',
-    licenseURL: 'https://choosealicense.com/licenses/unlicense/',
-  },
-];
+function renderLicenseLink(license) {
+  console.log(license);  
+const usedLicenses = genLicenses.filter(x => x.licenseName == license);
+return usedLicenses[0].licenseURL;
+}
 
-
-function renderLicenseBadge(license) {}
-
-function renderLicenseLink(license) {}
-
-function renderLicenseSection(license) {}
 
 function generateMarkdown(responses) {
-  return `${renderLicenseBadge(responses.license)}
+  return `
 
   # ${responses.readTitle}
 
@@ -96,12 +100,13 @@ function generateMarkdown(responses) {
   ${responses.readCredit}
 
   ### Licenses
-  ${responses.chooseLicence}
+  ${renderLicenseBadge(responses.license)}
+  ${responses.license}
+  ${renderLicenseLink(responses.license)}
 
   ### Contact
 
-  Github:
-  ${responses.gitHubUser}
+  Github: www.github.com/${responses.gitHubUser}
 
   Email:
   ${responses.emailAddress}

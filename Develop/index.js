@@ -51,7 +51,7 @@ const questions = [
     message: "Enter your email address",
   },
   {
-    type: "checkbox",
+    type: "list",
     name: "chooseLicence",
     message: "Select the licences that apply to your project",
     choices: [
@@ -66,8 +66,8 @@ const questions = [
   },
 ];
 
-function writeToFile(fileName, data) {
-  fs.writeFile("./utils/Generated/README.md", data, (err) => err ? console.log(err) : console.log("Readme has been Generated successfully"));
+function writeToFile (data) {
+  fs.writeFile("./Generated/README.md", data, (err) => err ? console.log(err) : console.log("Readme has been Generated successfully"));
 }
 
 function init() {

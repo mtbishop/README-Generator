@@ -54,7 +54,7 @@ const questions = [
     message: "Enter your email address",
   },
   {
-    type: "list",
+    type: "checkbox",
     name: "chooseLicence",
     message: "Select the licences that apply to your project",
     choices: [

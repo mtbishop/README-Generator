@@ -76,19 +76,31 @@ function generateMarkdown(responses) {
   [Licenses](#licenses)
   [Contact](#contact)
 
-  # Installation
+  ## Installation
+  ${responses.readInstall}
 
-  # Usage
+  ## Usage
+  ${responses.readUsage}
 
-  # Contribute
+  ## Contribute
+  ${responses.readContrib}
 
-  # Testing
+  ## Testing
+  ${responses.readTest}
 
-  # Credits
+  ## Credits
+  ${responses.readCredit}
 
-  # Licenses
+  ## Licenses
+  ${responses.chooseLicence}
 
-  # Contact
+  ## Contact
+
+  Github:
+  ${responses.gitHubUser}
+
+  Email:
+  ${responses.emailAddress}
 
 `;
 }

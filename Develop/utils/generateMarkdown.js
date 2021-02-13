@@ -48,15 +48,10 @@ const licenses = [
 
 function renderLicenseBadge(license) {}
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
 function renderLicenseLink(license) {}
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
 function renderLicenseSection(license) {}
 
-// TODO: Create a function to generate markdown for README
 function generateMarkdown(responses) {
   return `${renderLicenseBadge(responses.license)}
 
@@ -66,35 +61,44 @@ function generateMarkdown(responses) {
 
   ${responses.readDesc}
 
-  ### Contents
+  ## Contents
+
   [Description](#description)
+
   [Installation](#installation)
+
   [Usage](#usage)
+
   [Contribute](#contribute)
+
   [Testing](#testing)
+
   [Credits](#credits)
+
   [Licenses](#licenses)
+
   [Contact](#contact)
 
-  ## Installation
+
+  ### Installation
   ${responses.readInstall}
 
-  ## Usage
+  ### Usage
   ${responses.readUsage}
 
-  ## Contribute
+  ### Contribute
   ${responses.readContrib}
 
-  ## Testing
+  ### Testing
   ${responses.readTest}
 
-  ## Credits
+  ### Credits
   ${responses.readCredit}
 
-  ## Licenses
+  ### Licenses
   ${responses.chooseLicence}
 
-  ## Contact
+  ### Contact
 
   Github:
   ${responses.gitHubUser}

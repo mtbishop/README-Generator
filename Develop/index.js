@@ -68,7 +68,7 @@ const questions = [
 ];
 // function that creates the readme files with responses for if it's created successfully
 function writeToFile (data) {
-  fs.writeFile("./Generated README/README.md", data, (err) => err ? console.log(err) : console.log("Readme has been Generated successfully"));
+  fs.writeFile("./Generated/README.md", data, (err) => err ? console.log(err) : console.log("Readme has been Generated successfully"));
 }
 
 // function that initializes the inquirer npm and generates the responses from the user inputted questions

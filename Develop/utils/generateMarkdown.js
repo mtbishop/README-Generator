@@ -1,4 +1,3 @@
-function renderLicenseBadge(license) {
   // License array for the name/badge/info for each license. Can choose which one is appropriate for project.
   const genLicenses = [
     {
@@ -44,17 +43,16 @@ function renderLicenseBadge(license) {
       licenseURL: 'https://choosealicense.com/licenses/unlicense/',
     },
   ];
-  console.log(license);
-  const usedLicenses = genLicenses.filter((x) => x.licenseName == license);
+
+function renderLicenseBadge(license) {
+  const usedLicenses = genLicenses.filter(x => x.licenseName == license);
   return usedLicenses[0].badgeURL;
 }
 
 function renderLicenseLink(license) {
-  console.log(license);  
 const usedLicenses = genLicenses.filter(x => x.licenseName == license);
 return usedLicenses[0].licenseURL;
 }
-
 
 function generateMarkdown(responses) {
   return `
@@ -100,9 +98,9 @@ function generateMarkdown(responses) {
   ${responses.readCredit}
 
   ### Licenses
-  ${renderLicenseBadge(responses.license)}
-  ${responses.license}
-  ${renderLicenseLink(responses.license)}
+  ${renderLicenseBadge(responses.chooseLicense)}
+  ${responses.chooseLicense}
+  ${renderLicenseLink(responses.chooseLicense)}
 
   ### Contact
 

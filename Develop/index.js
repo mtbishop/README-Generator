@@ -52,8 +52,8 @@ const questions = [
   },
   {
     type: "list",
-    name: "chooseLicence",
-    message: "Select the licences that apply to your project",
+    name: "chooseLicense",
+    message: "Select the licenses that apply to your project",
     choices: [
       "MIT",
       "Apache 2.0",
@@ -75,7 +75,7 @@ function init() {
   .prompt(questions)
   .then((responses => {
     const readmeAnswers = generateMarkdown(responses);
-    writeToFile("README.md", readmeAnswers);
+    writeToFile(readmeAnswers);
   }));
 }
 

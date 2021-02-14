@@ -7,10 +7,15 @@ This application takes user input from the terminal and populates in an organize
 ## Contents
 
 [User Story](#UserStory)
+
 [Installation](#installation)
+
 [Usage](#usage)
+
 [Contribution](#contribution)
+
 [Licenses](#licenses)
+
 [Contact](#contact)
 
 

@@ -34,17 +34,17 @@ Second: Download the zip file and extract it to a place of your choosing.
 Third: Assuming you have Node.js (https://nodejs.org/en/download/) and VS Code (https://code.visualstudio.com/) installed
 Open the file with VS code and inside the Develop folder, right click and "Open in Integrated Termial".
 
-[Integrated Termail](https://github.com/mtbishop/README-Generator/blob/main/Develop/Assets/images/pic1.png)
+![Integrated Termail](https://github.com/mtbishop/README-Generator/blob/main/Develop/Assets/images/pic1.png)
 
 Fourth: Install the npm packages for inquirer (https://www.npmjs.com/package/inquirer) by typing in the Integrated Terminal "npm i"
 
-[Install npm](https://github.com/mtbishop/README-Generator/blob/main/Develop/Assets/images/pic2.png)
+![Install npm](https://github.com/mtbishop/README-Generator/blob/main/Develop/Assets/images/pic2.png)
 
 ## Usage
 
 Fifth: After the npm package has been installed, you are able to run the program by typing in the Integrated Terminal "node index.js"
 
-[Run Node index.js](https://github.com/mtbishop/README-Generator/blob/main/Develop/Assets/images/pic3.png)
+![Run Node index.js](https://github.com/mtbishop/README-Generator/blob/main/Develop/Assets/images/pic3.png)
 
 Sixth: After you run the script, you will be prompted with a assortment of questions to fill out the criteria of your README file including:
 Title of Project
@@ -58,12 +58,12 @@ Points of contact
 Contact information including github username and email
 Choice of different licenses
 
-[Questions list](https://github.com/mtbishop/README-Generator/blob/main/Develop/Assets/images/pic4.1.png)
+![Questions list](https://github.com/mtbishop/README-Generator/blob/main/Develop/Assets/images/pic4.1.png)
 
 
 The end product shoudl look like this, 
 
-[End product](https://github.com/mtbishop/README-Generator/blob/main/Develop/Assets/images/pic5.png)
+![End product](https://github.com/mtbishop/README-Generator/blob/main/Develop/Assets/images/pic5.png)
 
 but instead of the "test" responses the user will have their own answers that they will input when prompted.
 

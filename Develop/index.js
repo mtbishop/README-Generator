@@ -1,8 +1,9 @@
-
+// Required files to pull data from
 const inquirer = require("inquirer");
 const fs = require("fs");
 const generateMarkdown = require("./utils/generateMarkdown");
 
+// Array of questions for user input
 const questions = [
   {
     type: "input",
@@ -65,11 +66,12 @@ const questions = [
     ]
   },
 ];
-
+// function that creates the readme files with responses for if it's created successfully
 function writeToFile (data) {
-  fs.writeFile("./Generated/README.md", data, (err) => err ? console.log(err) : console.log("Readme has been Generated successfully"));
+  fs.writeFile("./Generated README/README.md", data, (err) => err ? console.log(err) : console.log("Readme has been Generated successfully"));
 }
 
+// function that initializes the inquirer npm and generates the responses from the user inputted questions
 function init() {
   inquirer
   .prompt(questions)
@@ -78,5 +80,5 @@ function init() {
     writeToFile(readmeAnswers);
   }));
 }
-
+// runs initializing function
 init();

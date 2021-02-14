@@ -44,16 +44,19 @@
     },
   ];
 
+// function that filters which license the user chose and returns the correct badge for that license
 function renderLicenseBadge(license) {
   const usedLicenses = genLicenses.filter(x => x.licenseName == license);
   return usedLicenses[0].badgeURL;
 }
 
+// function that filters which license the user chose and returns the like for the license that was chosen
 function renderLicenseLink(license) {
 const usedLicenses = genLicenses.filter(x => x.licenseName == license);
 return usedLicenses[0].licenseURL;
 }
 
+// function that writes out the users response and returns it inside the readme file
 function generateMarkdown(responses) {
   return `
 
@@ -99,8 +102,8 @@ function generateMarkdown(responses) {
 
   ### Licenses
   ${renderLicenseBadge(responses.chooseLicense)}
-  ${responses.chooseLicense}
-  ${renderLicenseLink(responses.chooseLicense)}
+  
+  For more information on this license please visit "${renderLicenseLink(responses.chooseLicense)}"
 
   ### Contact
 
@@ -111,5 +114,5 @@ function generateMarkdown(responses) {
 
 `;
 }
-
+// exports the users response function to the index
 module.exports = generateMarkdown;

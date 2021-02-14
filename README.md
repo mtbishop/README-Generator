@@ -129,3 +129,7 @@ You are required to submit the following for review:
 Reference for License Badges: https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
 
 References for Licenses: https://choosealicense.com/licenses/
+
+Help with syntax errors: https://github.com/eliaswolfgang
+
+Reference for Markdown: https://www.markdownguide.org/cheat-sheet/
